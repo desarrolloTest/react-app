@@ -1,3 +1,5 @@
+
+import React from 'react';
 import styled from 'styled-components';
 import { createBreakpoint } from 'styled-components-breakpoint';
 const breakpoints = {xs: 0,sm: 576,md: 768,lg: 992,xl: 1200};
@@ -41,6 +43,8 @@ const Button = styled.button`
 
     color: ${props => props.theme.color};
     background: ${props => props.theme.back};
+
+    margin-bottom:10px;
 `;
 
 const themeWhite = {color: "cornflowerblue", back: "white"};
@@ -50,19 +54,21 @@ const validate = event => {
     console.log('EVENT CLICK');
 };
 
-function Footer() {
+class Footer extends React.Component{
 
-    return (
-        <ContainerFooter>
-            <CancelSection>
-                <Button theme={themeWhite}>Cancel Post</Button>
-            </CancelSection>
-            <PreviewSection>
-                <Button theme={themeBlue} id="btnPreviewPost" onClick={validate}>Preview Post before publishing</Button>
-            </PreviewSection>
-        </ContainerFooter>
-            
-    );
+    render(){
+        return (
+            <ContainerFooter>
+                <CancelSection>
+                    <Button theme={themeWhite}>Cancel Post</Button>
+                </CancelSection>
+                <PreviewSection>
+                    <Button theme={themeBlue} id="btnPreviewPost" onClick={validate}>Preview Post before publishing</Button>
+                </PreviewSection>
+            </ContainerFooter>
+                
+        );
+    }
 }
 
 export default Footer;

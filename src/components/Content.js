@@ -4,11 +4,6 @@ import { faTwitter} from "@fortawesome/free-brands-svg-icons";
 import { faLaugh} from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-/*import FontAwesome, { 
-    Icons,
-    IconTypes
-  } from '@fortawesome/free-brands-svg-icons';//*/
-
 import styled from 'styled-components'
 import { createBreakpoint } from 'styled-components-breakpoint';
 const breakpoints = { xs: 0, sm: 576, md: 768, lg: 992, xl: 1200 };
@@ -24,21 +19,41 @@ const Container = styled.div`
     ${breakpoint('md')`
         display: flex;
     `}
+
+    ${breakpoint('lg')`
+        display: flex;
+    `}
 `;
 
 const SocialMediaSection = styled.div`
-    width:40%;
+    width:100%;
 
     ${breakpoint('sm')`
         width:100%;
     `}
+
+    ${breakpoint('md')`
+        width:40%;
+    `}
+
+    ${breakpoint('lg')`
+        width:50%;
+    `}
 `;
 
 const DataPostSection = styled.div`
-    width:60%;
+    width:100%;
 
     ${breakpoint('sm')`
         width:100%;
+    `}
+
+    ${breakpoint('md')`
+        width:60%;
+    `}
+
+    ${breakpoint('lg')`
+        width:50%;
     `}
 `;
 
@@ -94,7 +109,7 @@ const TextArea = styled.textarea`
 `;
 
 const Button = styled.button`
-    border-radius: 25px;
+    border-radius: 10px;
     text-align: center;
     padding: 10px;
     border: 1px solid cornflowerblue;
